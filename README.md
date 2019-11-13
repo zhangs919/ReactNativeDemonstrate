@@ -1,37 +1,67 @@
-# React Native Demonstrate
+#  ReactNativeDemonstrate
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
-#### 介绍
-React Native components and famous third plugins all in one.
+* Standard compliant React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
 
-#### 软件架构
-软件架构说明
+## :arrow_up: How to Setup
 
+**Step 1:** git clone this repo:
 
-#### 安装教程
+**Step 2:** cd to the cloned repo:
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+**Step 3:** Install the Application with `yarn` or `npm i`
 
 
-#### 码云特技
+## :arrow_forward: How to Run App
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1. cd to the repo
+2. Run Build for either OS
+  * for iOS
+    * run `react-native run-ios`
+  * for Android
+    * Run Genymotion
+    * run `react-native run-android`
+
+## :no_entry_sign: Standard Compliant
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+This project adheres to Standard.  Our CI enforces this, so we suggest you enable linting to keep your project compliant during development.
+
+**To Lint on Commit**
+
+This is implemented using [husky](https://github.com/typicode/husky). There is no additional setup needed.
+
+**Bypass Lint**
+
+If you have to bypass lint for a special commit that you will come back and clean (pushing something to a branch etc.) then you can bypass git hooks with adding `--no-verify` to your commit command.
+
+**Understanding Linting Errors**
+
+The linting rules are from JS Standard and React-Standard.  [Regular JS errors can be found with descriptions here](http://eslint.org/docs/rules/), while [React errors and descriptions can be found here](https://github.com/yannickcr/eslint-plugin-react).
+
+## :closed_lock_with_key: Secrets
+
+This project uses [react-native-config](https://github.com/luggit/react-native-config) to expose config variables to your javascript code in React Native. You can store API keys
+and other sensitive information in a `.env` file:
+
+```
+API_URL=https://myapi.com
+GOOGLE_MAPS_API_KEY=abcdefgh
+```
+
+and access them from React Native like so:
+
+```
+import Secrets from 'react-native-config'
+
+Secrets.API_URL  // 'https://myapi.com'
+Secrets.GOOGLE_MAPS_API_KEY  // 'abcdefgh'
+```
+
+The `.env` file is ignored by git keeping those secrets out of your repo.
+
+### Get started:
+1. Copy .env.example to .env
+2. Add your config variables
+3. Follow instructions at [https://github.com/luggit/react-native-config#setup](https://github.com/luggit/react-native-config#setup)
+4. Done!
