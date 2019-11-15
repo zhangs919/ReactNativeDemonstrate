@@ -6,6 +6,17 @@ import RoundedButton from '../Components/RoundedButton'
 
 export default class LaunchScreen extends Component {
 
+  componentDidMount() {
+    this.timer = setTimeout(() => {
+      // SplashScreen.hide();
+      this.props.navigation.navigate('MainScreen')
+    }, 3000);
+  }
+
+  componentWillUnmount() {
+    this.timer && clearTimeout(this.timer);
+  }
+
   render () {
     return (
       <View style={{ flex: 1 }}>
@@ -29,10 +40,10 @@ export default class LaunchScreen extends Component {
             backgroundColor: Colors.facebook
           }}
           onPress={
-            () => this.props.navigation.navigate('HomeScreen')
+            () => this.props.navigation.navigate('MainScreen')
           }
         >
-          开启 react native 之旅
+          Discover it!
         </RoundedButton>
       </View>
     )
