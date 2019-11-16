@@ -5,6 +5,7 @@ import { BulletItem, Button, Header, Text, Screen, Wallpaper } from "../../compo
 import { color, spacing } from "../../theme"
 import { Api } from "../../services/api"
 import { save } from "../../utils/storage"
+import {getSnapshot, types} from "mobx-state-tree";
 export const logoIgnite = require("./logo-ignite.png")
 export const heart = require("./heart.png")
 
@@ -115,10 +116,70 @@ export const DemoScreen: React.FunctionComponent<DemoScreenProps> = props => {
       demo.getUser("1")
       // Let's do some async storage stuff
       await save("Cool Name", "Boaty McBoatface")
+
+
     },
     [],
   )
 
+  // const Todo = types.model({
+  //   name: types.optional(types.string, ""),
+  //   done: types.optional(types.boolean, false)
+  // })
+  // const User = types.model({
+  //   name: types.optional(types.string, "")
+  // })
+  // const john = User.create({name: 'john'});
+  // const eat = Todo.create({name: "eat", done: true})
+  //
+  // const RootStore = types.model({
+  //   users: types.map(User),
+  //   todos: types.optional(types.map(Todo), {})
+  // })
+  // const store = RootStore.create({
+  //   users: {}
+  // })
+
+  const Todo = types
+    .model({
+      name: types.optional(types.string, ""),
+      done: types.optional(types.boolean, false)
+    })
+    .actions(self => ({
+      setName(newName) {
+        self.name = newName
+      },
+
+      toggle(){
+        self.done = !self.done
+      }
+    }))
+
+  const User = types.model({
+    name: types.optional(types.string, "")
+  })
+
+  const RootStore = types
+    .model({
+      users: types.map(User),
+      todos: types.map(Todo)
+    })
+    .actions(self => ({
+      addTodo(id, name) {
+        self.todos.set(id, Todo.create({name}))
+      }
+    }))
+
+  const store = RootStore.create({
+    users: {}
+  })
+  store.addTodo(1, "Eat a cake")
+  store.todos.get(1).toggle();
+
+  const demoApi = new Api();
+  demoApi.setup()
+  // demoApi.getAppGuide();
+  console.log(demoApi.getAppGuide())
   return (
     <View style={FULL}>
       <Wallpaper />
@@ -142,12 +203,13 @@ export const DemoScreen: React.FunctionComponent<DemoScreenProps> = props => {
             onPress={demoReactotron}
           />
           <Text style={HINT} tx={`demoScreen.${Platform.OS}ReactotronHint`} />
+          <Text>{JSON.stringify(getSnapshot(store))}</Text>
         </View>
         <Image source={logoIgnite} style={IGNITE} />
         <View style={LOVE_WRAPPER}>
           <Text style={LOVE} text="Made with" />
           <Image source={heart} style={HEART} />
-          <Text style={LOVE} text="by Infinite Red" />
+          <Text style={LOVE} text="by Infinite Redddd" />
         </View>
       </Screen>
     </View>
