@@ -1,11 +1,31 @@
 import * as React from "react"
-import {ScrollView, StyleSheet, View, Text, TouchableOpacity, FlatList, Image, Alert, Button} from "react-native"
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  FlatList,
+  Image,
+  ToastAndroid
+} from "react-native"
 import {Screen, SliderEntry} from "../../components"
 // import { useStores } from "../models/root-store"
 import {color, metrics, palette} from "../../theme"
 import {NavigationScreenProps} from "react-navigation"
 import Carousel from 'react-native-snap-carousel';
-
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import {
+  BallIndicator,
+  BarIndicator,
+  DotIndicator,
+  MaterialIndicator,
+  PacmanIndicator,
+  PulseIndicator,
+  SkypeIndicator,
+  UIActivityIndicator,
+  WaveIndicator,
+} from "react-native-indicators"
 
 export interface HomeScreenProps extends NavigationScreenProps<{}> {
 }
@@ -164,13 +184,13 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
       {
         title: 'Navigation',
         subTitle: 'react-navigation',
-        routeName: 'navigationScreen',
+        routeName: 'carouselScreen',
         icon: 'https://68dsw.oss-cn-beijing.aliyuncs.com/images/site/2/gallery/2019/04/28/15564235994967.jpg'
       },
       {
         title: 'Echarts',
         subTitle: 'echarts-for-react',
-        routeName: 'echartScreen',
+        routeName: 'carouselScreen',
         icon: 'https://68dsw.oss-cn-beijing.aliyuncs.com/images/site/2/gallery/2019/04/28/15564235994967.jpg'
       },
       {
@@ -183,10 +203,112 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
 
     return (
       <View style={styles.recComContainer}>
-        <Text style={{
-          fontSize: 16,
-          marginLeft: 15,
-        }}>Recommend Components</Text>
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginHorizontal: 15,
+          }}
+        >
+          <Text style={{
+            fontSize: 16,
+
+          }}>Recommend components</Text>
+          <TouchableOpacity
+            onPress={() => {
+              ToastAndroid.show("Show more", ToastAndroid.SHORT);
+            }}
+          >
+            <MaterialCommunityIcons name='dots-horizontal' size={20} color={palette.black} />
+          </TouchableOpacity>
+        </View>
+        <FlatList
+          data={recComData}
+          keyExtractor={this._keyExtractor}
+          renderItem={this._renderRecComItem.bind(this)}
+          contentContainerStyle={{
+            // 主轴方向
+            flexDirection: 'row',
+
+            justifyContent: 'space-around',
+            // 一行显示不下,换一行
+            flexWrap: 'wrap',
+            // 侧轴方向
+            alignItems: 'center', // 必须设置,否则换行不起作用
+            marginTop: 15
+          }}
+
+          // showsVerticalScrollIndicator={false}
+          // refreshControl={
+          //   <RefreshControl
+          //     title={'Loading'}
+          //     // titleColor={THEME_COLOR}
+          //     // colors={[THEME_COLOR]}
+          //     refreshing={true}
+          //     // onRefresh={() => this.loadData()}
+          //     // tintColor={THEME_COLOR}
+          //   />
+          // }
+        />
+
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginHorizontal: 15,
+          }}
+        >
+          <Text style={{
+            fontSize: 16,
+
+          }}>Commonly used components</Text>
+          <TouchableOpacity
+            onPress={() => {
+              ToastAndroid.show("Show more", ToastAndroid.SHORT);
+            }}
+          >
+            <MaterialCommunityIcons name='dots-horizontal' size={20} color={palette.black} />
+          </TouchableOpacity>
+        </View>
+        <FlatList
+          data={recComData}
+          keyExtractor={this._keyExtractor}
+          renderItem={this._renderRecComItem.bind(this)}
+          contentContainerStyle={{
+            // 主轴方向
+            flexDirection: 'row',
+
+            justifyContent: 'space-around',
+            // 一行显示不下,换一行
+            flexWrap: 'wrap',
+            // 侧轴方向
+            alignItems: 'center', // 必须设置,否则换行不起作用
+            marginTop: 15
+          }}
+        />
+
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginHorizontal: 15,
+          }}
+        >
+          <Text style={{
+            fontSize: 16,
+
+          }}>Study resources</Text>
+          <TouchableOpacity
+            onPress={() => {
+              ToastAndroid.show("Show more", ToastAndroid.SHORT);
+            }}
+          >
+            <MaterialCommunityIcons name='dots-horizontal' size={20} color={palette.black} />
+          </TouchableOpacity>
+        </View>
         <FlatList
           data={recComData}
           keyExtractor={this._keyExtractor}
@@ -219,7 +341,25 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
         {/*精选组件*/}
         {this.recommendComponents()}
 
-
+        {/*indicators*/}
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'column',
+            justifyContent: 'space-around',
+            marginVertical: 15,
+          }}
+        >
+          <BallIndicator color={palette.purple} />
+          <BarIndicator color={palette.purple} />
+          <DotIndicator color={palette.purple} />
+          <MaterialIndicator color={palette.purple} />
+          <PacmanIndicator color={palette.angry} />
+          <PulseIndicator color={palette.purple} />
+          <SkypeIndicator color={palette.purple} />
+          <UIActivityIndicator color={palette.purple} />
+          <WaveIndicator color={palette.purple} />
+        </View>
 
         {/*<Button title={'轮播组件'} onPress={()=>{*/}
           {/*this.props.navigation.navigate('carouselScreen')*/}

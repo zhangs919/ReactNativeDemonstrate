@@ -161,4 +161,6 @@ export const MainNavigator = createStackNavigator(
  * Anything not on this list will be a standard `back` action in
  * react-navigation.
  */
-export const exitRoutes: string[] = ["homeScreen"]
+export const exitRoutes: string[] = [
+  // "welcome"
+]

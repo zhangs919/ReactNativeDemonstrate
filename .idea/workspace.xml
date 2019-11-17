@@ -2,84 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02ab214e-3386-46ef-876c-df3911273ae7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/back-button/back-button.story.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/back-button/back-button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/back-button/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/slider-entry/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/calendar.active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/calendar.active@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/calendar.active@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/calendar.inactive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/calendar.inactive@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/calendar.inactive@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/info.active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/info.active@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/info.active@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/info.inactive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/info.inactive@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/info.inactive@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/map.active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/map.active@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/map.active@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/map.inactive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/map.inactive@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/map.inactive@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/profile.active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/profile.active@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/profile.active@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/profile.inactive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/profile.inactive@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/icons/profile.inactive@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/tab-icon/tab-icon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/title-bar/icon.back-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/title-bar/icon.back-arrow@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/title-bar/icon.back-arrow@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/title-bar/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/title-bar/title-bar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/demonstrate/echarts-for-react/echart-screen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/demonstrate/react-native-snap-carousel/carousel-screen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/demonstrate/react-native-snap-carousel/components/SliderEntry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/demonstrate/react-native-snap-carousel/static/entries.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/demonstrate/react-native-snap-carousel/styles/SliderEntry.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/demonstrate/react-native-snap-carousel/styles/index.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/demonstrate/react-native-snap-carousel/utils/animations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/demonstrate/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/navigation/main-navigator.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/screens/category-screen/category-screen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/screens/message-screen/message-screen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/screens/my-screen/my-screen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/screens/welcome-screen/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/theme/metrics.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/reactnativedemonstrate/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/com/reactnativedemonstrate/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/navigation/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/navigation/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/navigation/primary-navigator.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/navigation/root-navigator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/navigation/root-navigator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/welcome-screen/welcome-screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/welcome-screen/welcome-screen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/theme/color.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/theme/color.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/theme/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/theme/palette.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/theme/palette.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/theme/spacing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/theme/spacing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/third-part-plugins.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/third-part-plugins.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ignite/ignite.json" beforeDir="false" afterPath="$PROJECT_DIR$/ignite/ignite.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeDemonstrate.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/ReactNativeDemonstrate.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/ReactNativeDemonstrate/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/ReactNativeDemonstrate/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/navigation/main-navigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/navigation/main-navigator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/home-screen/home-screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/home-screen/home-screen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storybook/storybook-registry.ts" beforeDir="false" afterPath="$PROJECT_DIR$/storybook/storybook-registry.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -92,54 +18,55 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/screens/home-screen/home-screen.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="187" column="25" lean-forward="true" selection-start-line="187" selection-start-column="25" selection-end-line="187" selection-end-column="25" />
+            <state relative-caret-position="632">
+              <caret line="356" column="58" selection-start-line="356" selection-start-column="58" selection-end-line="356" selection-end-column="58" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-                <element signature="e#250#301#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/screens/welcome-screen/welcome-screen.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="130" column="28" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#283#334#0" expanded="true" />
+                <element signature="n#!!block;n#topCarousel#0;n#HomeScreen#0" />
+                <element signature="e#4758#5703#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/demonstrate/echarts-for-react/echart-screen.tsx">
+        <entry file="file://$PROJECT_DIR$/app/theme/palette.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="107" selection-start-line="107" selection-end-line="107" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-                <element signature="e#186#228#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="510">
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/echarts-for-react/README.md">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/screen/screen.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/design.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SECOND">
-              <first_editor>
-                <folding>
-                  <element signature="e#0#26#0" expanded="true" />
-                  <element signature="e#0#31#0" expanded="true" />
-                </folding>
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-300">
+                <caret line="8" column="8" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="8" />
               </first_editor>
               <second_editor />
             </state>
@@ -147,10 +74,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/navigation/main-navigator.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="5" selection-start-line="5" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/navigation/root-navigator.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state relative-caret-position="210">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="11" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -169,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>themecolors</find>
       <find>HomePage</find>
       <find>Page</find>
       <find>CarouselScreenDemoDemo</find>
@@ -199,6 +134,7 @@
       <find>HIT_SLOP</find>
       <find>DiscoverScreen</find>
       <find>div</find>
+      <find>'red'</find>
     </findStrings>
     <replaceStrings>
       <replace>HomeScreen</replace>
@@ -209,6 +145,7 @@
       <replace>CarouselScreen</replace>
       <replace>black</replace>
       <replace>EchartScreen</replace>
+      <replace>{palette.purple}</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\react-native\ReactNativeDemonstrate\App</dir>
@@ -272,10 +209,10 @@
         <option value="$PROJECT_DIR$/app/app.tsx" />
         <option value="$PROJECT_DIR$/app/navigation/root-navigator.ts" />
         <option value="$PROJECT_DIR$/docs/third-part-plugins.md" />
-        <option value="$PROJECT_DIR$/app/navigation/main-navigator.tsx" />
         <option value="$PROJECT_DIR$/app/demonstrate/echarts-for-react/echart-screen.tsx" />
-        <option value="$PROJECT_DIR$/app/screens/home-screen/home-screen.tsx" />
         <option value="$PROJECT_DIR$/app/screens/welcome-screen/welcome-screen.tsx" />
+        <option value="$PROJECT_DIR$/app/navigation/main-navigator.tsx" />
+        <option value="$PROJECT_DIR$/app/screens/home-screen/home-screen.tsx" />
       </list>
     </option>
   </component>
@@ -302,6 +239,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,9 +281,7 @@
             <path>
               <item name="ReactNativeDemonstrate" type="b2602c69:ProjectViewProjectNode" />
               <item name="ReactNativeDemonstrate" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="welcome-screen" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ReactNativeDemonstrate" type="b2602c69:ProjectViewProjectNode" />
@@ -356,7 +292,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,18 +353,19 @@
       <workItem from="1573802017983" duration="1329000" />
       <workItem from="1573873893470" duration="17068000" />
       <workItem from="1573952020109" duration="6516000" />
-      <workItem from="1573969044876" duration="23641000" />
+      <workItem from="1573969044876" duration="23813000" />
+      <workItem from="1573999746187" duration="4540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64649000" />
+    <option name="totallyTimeSpent" value="69361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25052854" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25052854" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -443,7 +379,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005285" side_tool="true" weight="0.2883978" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49947146" visible="true" weight="0.2883978" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49947146" weight="0.2872928" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32928178" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -475,20 +411,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/screens/my-screen/my-screen.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#215#250#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/title-bar/index.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/title-bar/title-bar.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -583,20 +505,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/demonstrate/react-native-snap-carousel/CarouselScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" selection-start-line="2" selection-end-line="3" />
-          <folding>
-            <element signature="e#1469#3219#0" />
-            <element signature="e#3257#4199#0" />
-            <element signature="e#4241#5132#0" />
-            <element signature="e#5195#6368#0" />
-            <element signature="e#6390#6652#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/demonstrate/react-native-snap-carousel/CarouselScreen.js" />
     <entry file="file://$PROJECT_DIR$/app/demonstrate/react-native-snap-carousel/utils/animations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4738" />
@@ -734,13 +643,6 @@
     <entry file="file://$PROJECT_DIR$/app/theme/typography.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/theme/palette.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/third-part-plugins.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -779,23 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/screen/screen.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/navigation/root-navigator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/NodeJS/lib/NodeJS.jar!/com/jetbrains/nodejs/packageJson/packageJsonSchema.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -824,27 +709,10 @@
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/demonstrate/react-native-snap-carousel/carousel-screen.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2220">
           <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/navigation/main-navigator.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="90" column="14" selection-start-line="90" selection-start-column="14" selection-end-line="90" selection-end-column="14" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
@@ -872,23 +740,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/home-screen/home-screen.tsx">
+    <entry file="file://$PROJECT_DIR$/app/screens/welcome-screen/welcome-screen.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="187" column="25" lean-forward="true" selection-start-line="187" selection-start-column="25" selection-end-line="187" selection-end-column="25" />
+        <state relative-caret-position="122">
+          <caret line="122" column="43" lean-forward="true" selection-start-line="122" selection-start-column="43" selection-end-line="122" selection-end-column="43" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#250#301#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/welcome-screen/welcome-screen.tsx">
+    <entry file="file://$PROJECT_DIR$/app/navigation/root-navigator.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="130" column="28" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
+        <state relative-caret-position="210">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/design.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-300">
+            <caret line="8" column="8" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/navigation/main-navigator.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/react-native/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="4912" column="13" selection-start-line="4912" selection-start-column="13" selection-end-line="4912" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/screen/screen.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/theme/palette.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/home-screen/home-screen.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="356" column="58" selection-start-line="356" selection-start-column="58" selection-end-line="356" selection-end-column="58" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#283#334#0" expanded="true" />
+            <element signature="n#!!block;n#topCarousel#0;n#HomeScreen#0" />
+            <element signature="e#4758#5703#0" />
           </folding>
         </state>
       </provider>
