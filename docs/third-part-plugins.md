@@ -7,3 +7,5 @@
 ## react-native-snap-carousel[轮播组件]
 
 ## react-native-linear-gradient[颜色渐变]
+
+## echarts-for-react[echart 图表]

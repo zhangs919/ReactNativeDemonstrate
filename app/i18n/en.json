@@ -7,10 +7,20 @@
   "errors": {
     "invalidEmail": "Invalid email address."
   },
+  "tabbar": {
+    "home": "首页",
+    "discover": "发现"
+  },
   "welcomeScreen": {
     "poweredBy": "POWERED BY BOWSER",
     "readyForLaunch": "Ready for launch.",
     "continue": "CONTINUE"
+  },
+  "homeScreen": {
+    "header": "首页"
+  },
+  "discoverScreen": {
+    "header": "发现"
   },
   "demoScreen": {
     "howTo": "HOW TO",

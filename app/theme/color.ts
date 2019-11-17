@@ -61,4 +61,6 @@ export const color = {
    * white background
    */
   storybookTextColor: palette.black,
+
+  tabbar: palette.ebony,
 }

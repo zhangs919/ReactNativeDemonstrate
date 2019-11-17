@@ -50,6 +50,10 @@ const canExit = (routeName: string) => contains(routeName, exitRoutes)
  * This is the root component of our app.
  */
 export const App: React.FunctionComponent<{}> = () => {
+
+  // todo 暂时隐藏黄色提示信息
+  console.disableYellowBox = true;
+
   const [rootStore, setRootStore] = useState<RootStore | undefined>(undefined) // prettier-ignore
   useEffect(() => {
     setupRootStore().then(setRootStore)
