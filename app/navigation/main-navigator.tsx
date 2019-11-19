@@ -7,6 +7,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import {View,Text} from "react-native";
 import {CarouselScreen} from "../demonstrate/react-native-snap-carousel/carousel-screen";
 import {EchartScreen} from "../demonstrate/echarts-for-react/echart-screen";
+import { IndicatorScreen } from "../demonstrate/echarts-for-react/indicator-screen"
 
 
 class IconWithBadge extends React.Component {
@@ -79,6 +80,7 @@ export const MainNavigator = createStackNavigator(
             {
               homeScreen: { screen: HomeScreen },
               carouselScreen: {screen: CarouselScreen},
+              indicatorScreen: {screen: IndicatorScreen},
               echartScreen: {screen: EchartScreen},
             },
             {

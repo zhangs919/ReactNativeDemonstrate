@@ -15,17 +15,8 @@ import {color, metrics, palette} from "../../theme"
 import {NavigationScreenProps} from "react-navigation"
 import Carousel from 'react-native-snap-carousel';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import {
-  BallIndicator,
-  BarIndicator,
-  DotIndicator,
-  MaterialIndicator,
-  PacmanIndicator,
-  PulseIndicator,
-  SkypeIndicator,
-  UIActivityIndicator,
-  WaveIndicator,
-} from "react-native-indicators"
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+
 
 export interface HomeScreenProps extends NavigationScreenProps<{}> {
 }
@@ -148,9 +139,12 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
           style={styles.innerViewStyle}
         >
           <Image
-            source={{uri: item.icon}}
+            // source={{uri: item.icon}}
+            source={item.icon}
             style={styles.iconStyle}
+
           />
+          {/*<MaterialIcons name='view-carousel' size={20} color={palette.black} />*/}
           <View
             style={{
               flexDirection: 'column',
@@ -179,25 +173,32 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
         title: 'Carousel',
         subTitle: 'react-native-snap-carousel',
         routeName: 'carouselScreen',
-        icon: 'https://68dsw.oss-cn-beijing.aliyuncs.com/images/site/2/gallery/2019/04/28/15564235994967.jpg'
+        // icon: 'https://68dsw.oss-cn-beijing.aliyuncs.com/images/site/2/gallery/2019/04/28/15564235994967.jpg',
+        icon: require("./images/view_carousel.png")
       },
       {
         title: 'Navigation',
         subTitle: 'react-navigation',
         routeName: 'carouselScreen',
-        icon: 'https://68dsw.oss-cn-beijing.aliyuncs.com/images/site/2/gallery/2019/04/28/15564235994967.jpg'
+        icon: require("./images/navigation.png")
       },
       {
         title: 'Echarts',
         subTitle: 'echarts-for-react',
         routeName: 'carouselScreen',
-        icon: 'https://68dsw.oss-cn-beijing.aliyuncs.com/images/site/2/gallery/2019/04/28/15564235994967.jpg'
+        icon: require("./images/chart.png")
       },
+      // {
+      //   title: 'Button',
+      //   subTitle: 'button',
+      //   routeName: 'carouselScreen',
+      //   icon: require("./images/button.png")
+      // },
       {
-        title: 'Carousel',
-        subTitle: 'react-native-snap-carousel',
-        routeName: 'carouselScreen',
-        icon: 'https://68dsw.oss-cn-beijing.aliyuncs.com/images/site/2/gallery/2019/04/28/15564235994967.jpg'
+        title: 'Indicators',
+        subTitle: 'react-native-indicators',
+        routeName: 'indicatorScreen',
+        icon: require("./images/indicator-card.png")
       },
     ]
 
@@ -341,25 +342,7 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
         {/*精选组件*/}
         {this.recommendComponents()}
 
-        {/*indicators*/}
-        <View
-          style={{
-            flex: 1,
-            flexDirection: 'column',
-            justifyContent: 'space-around',
-            marginVertical: 15,
-          }}
-        >
-          <BallIndicator color={palette.purple} />
-          <BarIndicator color={palette.purple} />
-          <DotIndicator color={palette.purple} />
-          <MaterialIndicator color={palette.purple} />
-          <PacmanIndicator color={palette.angry} />
-          <PulseIndicator color={palette.purple} />
-          <SkypeIndicator color={palette.purple} />
-          <UIActivityIndicator color={palette.purple} />
-          <WaveIndicator color={palette.purple} />
-        </View>
+
 
         {/*<Button title={'轮播组件'} onPress={()=>{*/}
           {/*this.props.navigation.navigate('carouselScreen')*/}
