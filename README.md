@@ -1,7 +1,6 @@
 # ReactNativeDemonstrate
 
-![ReactNativeDemonstrate](https://github.com/zhangs919/ReactNativeDemonstrate/blob/master/download/apk/android.png ''ReactNativeDemonstrate'')
-
+![ReactNativeDemonstrate](https://github.com/zhangs919/ReactNativeDemonstrate/blob/master/download/apk/android.png)
 
 Currently includes:
 
