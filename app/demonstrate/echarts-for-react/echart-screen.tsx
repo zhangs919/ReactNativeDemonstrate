@@ -2,10 +2,11 @@ import * as React from "react"
 import {Platform, ViewStyle} from "react-native"
 import {Button, Screen, Text} from "../../components"
 // import { useStores } from "../models/root-store"
-import {color, palette} from "../../theme"
+import {color, metrics, palette} from "../../theme"
 import { NavigationScreenProps } from "react-navigation"
 import {BackButton} from "../../components/back-button";
-import ReactEcharts from "echarts-for-react";
+// import ReactEcharts from "echarts-for-react";
+import Echarts from 'native-echarts';
 
 export interface EchartScreenProps extends NavigationScreenProps<{}> {
 }
@@ -97,14 +98,36 @@ export class EchartScreen extends React.Component<EchartScreenProps, {}> {
     };
   };
 
+  getOption2 = () =>{
+    return {
+      title: {
+        text: 'ECharts demo'
+      },
+      tooltip: {},
+      legend: {
+        data:['销量']
+      },
+      xAxis: {
+        data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+      },
+      yAxis: {},
+      series: [{
+        name: '销量',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20]
+      }]
+    }
+  }
   render(){
     return (
       <Screen style={ROOT} preset="scroll">
         {/*echart demo*/}
-        <ReactEcharts
-          option={this.getOption()}
-          style={{height: '350px', width: '100%'}}
-          className='react_for_echarts' />
+        {/*<ReactEcharts*/}
+          {/*option={this.getOption()}*/}
+          {/*style={{height: 350, width: metrics.screenWidth}}*/}
+          {/*className='react_for_echarts' />*/}
+
+        <Echarts option={this.getOption2()} height={300} />
 
       </Screen>
     )

@@ -65,7 +65,7 @@ export class WebviewScreen extends React.Component<WebviewScreenProps, WebviewSc
   //   })
   // }
 
-  handleWebViewNavigationStateChange = newNavState => {
+  handleWebViewNavigationStateChange = navState => {
     // newNavState looks something like this:
     // {
     //   url?: string;
@@ -74,62 +74,79 @@ export class WebviewScreen extends React.Component<WebviewScreenProps, WebviewSc
     //   canGoBack?: boolean;
     //   canGoForward?: boolean;
     // }
-    const { url } = newNavState;
+    const { url } = navState;
     if (!url) return;
 
-    // loading ...
-    this.setState({loading: newNavState.loading})
+    this.setState({
+      backButtonEnabled: navState.canGoBack,
+      forwardButtonEnabled: navState.canGoForward,
+      url: navState.url,
+      status: navState.title,
+      loading: navState.loading,
+    });
 
-    // handle certain doctypes
-    if (url.includes('.pdf')) {
-      this.webview.stopLoading();
-      // open a modal with the PDF viewer
-    }
-
-    // one way to handle a successful form submit is via query strings
-    if (url.includes('?message=success')) {
-      this.webview.stopLoading();
-      // maybe close this view?
-    }
-
-    // one way to handle errors is via query string
-    if (url.includes('?errors=true')) {
-      this.webview.stopLoading();
-    }
-
-    // redirect somewhere else
-    if (url.includes('google.com')) {
-      const newURL = 'https://facebook.github.io/react-native/';
-      const redirectTo = 'window.location = "' + newURL + '"';
-      this.webview.injectJavaScript(redirectTo);
-    }
+    // // handle certain doctypes
+    // if (url.includes('.pdf')) {
+    //   this.webview.stopLoading();
+    //   // open a modal with the PDF viewer
+    // }
+    //
+    // // one way to handle a successful form submit is via query strings
+    // if (url.includes('?message=success')) {
+    //   this.webview.stopLoading();
+    //   // maybe close this view?
+    // }
+    //
+    // // one way to handle errors is via query string
+    // if (url.includes('?errors=true')) {
+    //   this.webview.stopLoading();
+    // }
+    //
+    // // redirect somewhere else
+    // if (url.includes('google.com')) {
+    //   const newURL = 'https://facebook.github.io/react-native/';
+    //   const redirectTo = 'window.location = "' + newURL + '"';
+    //   this.webview.injectJavaScript(redirectTo);
+    // }
 
   };
 
   render(){
 
-    const indicator = <BarIndicator color={palette.martinique} style={{
+    const indicator = <BarIndicator sizs={12} color={palette.martinique} style={{
       flex: 1,
       justifyContent: 'center',
+      position:'absolute',
       width: metrics.screenWidth,
       height: metrics.screenHeight - 64 - 40 - 25,
       alignItems: 'center',}} />
 
     return (
       <ScrollView>
-        {this.state.loading ? indicator : <WebView
+        <WebView
           ref={webView => this.webView = webView}
-          startInLoadingState={false}
+          startInLoadingState={true}
           bounces={true}
           scalesPageToFit={false}
           onNavigationStateChange={e => this.handleWebViewNavigationStateChange(e)}
           source={{uri: this.state.url}}
           scrollEnabled={true}
+          onLoad={(e) => console.log('onLoad')}
+          onLoadEnd={(e) => console.log('onLoadEnd')}
+          onLoadStart={(e) => console.log('onLoadStart')}
+          renderError={() => {
+            console.log('renderError')
+            return <View><Text>renderError回调了，出现错误</Text></View>
+          }}
+          renderLoading={() => {
+            return indicator
+          }}
+
           style={{
             width: metrics.screenWidth,
             height: metrics.screenHeight - 64 - 40 - 25
           }}
-        />}
+        />
 
 
       </ScrollView>

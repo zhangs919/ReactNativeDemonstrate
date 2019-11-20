@@ -7,7 +7,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import {View,Text} from "react-native";
 import {CarouselScreen} from "../demonstrate/react-native-snap-carousel/carousel-screen";
 import {EchartScreen} from "../demonstrate/echarts-for-react/echart-screen";
-import { IndicatorScreen } from "../demonstrate/echarts-for-react/indicator-screen"
+import { IndicatorScreen } from "../demonstrate/indicator-screen/indicator-screen"
 import { WebviewScreen } from "../screens/webview-screen/webview-screen"
 
 
