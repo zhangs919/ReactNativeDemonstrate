@@ -1,5 +1,6 @@
 # ReactNativeDemonstrate
 
+Please download the Android app to discover more:
 ![ReactNativeDemonstrate](https://github.com/zhangs919/ReactNativeDemonstrate/blob/master/download/apk/android.png)
 
 Currently includes:
