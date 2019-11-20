@@ -15,7 +15,7 @@ import {color, metrics, palette} from "../../theme"
 import {NavigationScreenProps} from "react-navigation"
 import Carousel from 'react-native-snap-carousel';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import AntDesign from 'react-native-vector-icons/AntDesign'
 
 
 export interface HomeScreenProps extends NavigationScreenProps<{}> {
@@ -338,6 +338,23 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
       <Screen style={{}} preset="scroll">
 
         {this.topCarousel()}
+
+        {/*github webview entry*/}
+        <TouchableOpacity
+          style={{
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            margin: 15
+          }}
+          onPress={() => {
+            this.props.navigation.navigate('webviewScreen', {url:"https://github.com/zhangs919/ReactNativeDemonstrate", title: 'react native demo github page'})
+          }}
+        >
+          <Text>React Native Demonstrate</Text>
+          <AntDesign name='github' size={20} color={palette.portGore} />
+        </TouchableOpacity>
 
         {/*精选组件*/}
         {this.recommendComponents()}

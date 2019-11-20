@@ -20,6 +20,7 @@ The react native demonstrate's structure will look similar to this:
 ReactNativeDemonstrate
 ├── app
 │   ├── components
+│   ├── demontrate 
 │   ├── i18n
 │   ├── utils
 │   ├── models
@@ -74,6 +75,7 @@ The inside of the src directory looks similar to the following:
 ```
 app
 │── components
+│── demontrate 
 │── i18n
 ├── models
 ├── navigation
@@ -86,6 +88,9 @@ app
 
 **components**
 This is where your React components will live. Each component will have a directory containing the `.tsx` file, along with a story file, and optionally `.presets`, and `.props` files for larger components. The app will come with some commonly used components like Button.
+
+**demontrate**
+This is where all the demo code will live.
 
 **i18n**
 This is where your translations will live if you are using `react-native-i18n`.
