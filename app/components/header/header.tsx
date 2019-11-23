@@ -1,9 +1,11 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle } from "react-native"
+import {View, ViewStyle, TextStyle, TouchableOpacity} from "react-native"
 import { HeaderProps } from "./header.props"
 import { Button, Icon, Text } from "../"
 import { spacing } from "../../theme"
 import { translate } from "../../i18n/"
+import Ionicons from 'react-native-vector-icons/Ionicons'
+
 
 // static styles
 const ROOT: ViewStyle = {
@@ -34,13 +36,21 @@ export const Header: React.FunctionComponent<HeaderProps> = props => {
     titleStyle,
   } = props
   const header = headerText || (headerTx && translate(headerTx)) || ""
-
+  {/*<Button preset="link" onPress={onLeftPress}>
+          <Icon icon={leftIcon} />
+        </Button>*/}
   return (
+
     <View style={{ ...ROOT, ...style }}>
       {leftIcon ? (
-        <Button preset="link" onPress={onLeftPress}>
-          <Icon icon={leftIcon} />
-        </Button>
+        <TouchableOpacity
+          style={{padding: 8, paddingLeft: 12}}
+          onPress={onLeftPress}>
+          <Ionicons
+            name={'ios-arrow-back'}
+            size={26}
+            style={{color: 'white'}}/>
+        </TouchableOpacity>
       ) : (
         <View style={LEFT} />
       )}

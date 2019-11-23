@@ -9,3 +9,5 @@
 ## react-native-linear-gradient[颜色渐变]
 
 ## echarts-for-react[echart 图表]
+
+## react-native-parallax-scroll-view[滚动视差效果]

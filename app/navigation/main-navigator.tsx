@@ -9,6 +9,7 @@ import {CarouselScreen} from "../demonstrate/react-native-snap-carousel/carousel
 import {EchartScreen} from "../demonstrate/echarts-for-react/echart-screen";
 import { IndicatorScreen } from "../demonstrate/indicator-screen/indicator-screen"
 import { WebviewScreen } from "../screens/webview-screen/webview-screen"
+import {ParallaxScrollViewScreen} from "../demonstrate/react-native-parallax-scroll-view/react-native-parallax-scroll-view";
 
 
 class IconWithBadge extends React.Component {
@@ -84,6 +85,7 @@ export const MainNavigator = createStackNavigator(
               indicatorScreen: {screen: IndicatorScreen},
               echartScreen: {screen: EchartScreen},
               webviewScreen: {screen: WebviewScreen, },
+              parallaxScrollViewScreen: {screen: ParallaxScrollViewScreen, },
             },
             {
               initialRouteName: "homeScreen",

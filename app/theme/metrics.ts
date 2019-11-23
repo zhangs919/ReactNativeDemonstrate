@@ -1,4 +1,4 @@
-import {Dimensions, Platform} from 'react-native'
+import {DeviceInfo, Dimensions, Platform} from 'react-native'
 
 const { width, height } = Dimensions.get('window')
 
@@ -8,6 +8,12 @@ function wp (percentage) {
   const value = (percentage * viewportWidth) / 100;
   return Math.round(value);
 }
+
+const TOP = (Platform.OS === 'ios') ? 20 + (DeviceInfo.isIPhoneX_deprecated ? 24 : 0) : 0;
+const NAV_BAR_HEIGHT_IOS = 44;
+const NAV_BAR_HEIGHT_ANDROID = 50;
+
+const STICKY_HEADER_HEIGHT = (Platform.OS === 'ios') ? NAV_BAR_HEIGHT_IOS + TOP : NAV_BAR_HEIGHT_ANDROID;
 
 // Carousel
 const slideHeight = viewportHeight * 0.36;
@@ -33,6 +39,8 @@ export const metrics = {
   screenWidth: width < height ? width : height,
   screenHeight: width < height ? height : width,
   navBarHeight: (Platform.OS === 'ios') ? 64 : 54,
+  navBarHeightIos: NAV_BAR_HEIGHT_IOS,
+  navBarHeightAndroid: NAV_BAR_HEIGHT_ANDROID,
   buttonRadius: 4,
   icons: {
     tiny: 15,
@@ -63,6 +71,10 @@ export const metrics = {
     right: 20,
     bottom: 20,
   },
+
+
+  stickyHeaderHeight: STICKY_HEADER_HEIGHT,
+  top: TOP,
 
   // 首页轮播
   slideHeight: slideHeight,

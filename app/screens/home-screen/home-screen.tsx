@@ -9,13 +9,17 @@ import {
   Image,
   ToastAndroid
 } from "react-native"
-import {Screen, SliderEntry} from "../../components"
+import {Header, Screen, SliderEntry} from "../../components"
 // import { useStores } from "../models/root-store"
 import {color, metrics, palette} from "../../theme"
 import {NavigationScreenProps} from "react-navigation"
 import Carousel from 'react-native-snap-carousel';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import ParallaxScrollView from 'react-native-parallax-scroll-view';
+
+const PARALLAX_HEADER_HEIGHT = 270;
+const AVATAR_SIZE = 90;
 
 
 export interface HomeScreenProps extends NavigationScreenProps<{}> {
@@ -43,16 +47,7 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
   }
 
 
-  _renderItemWithParallax = ({item, index}, parallaxProps) => {
-    return (
-      <SliderEntry
-        data={item}
-        even={(index + 1) % 2 === 0}
-        parallax={true}
-        parallaxProps={parallaxProps}
-      />
-    );
-  }
+
 
   // 顶部轮播
   topCarousel() {
@@ -120,6 +115,116 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
       </ScrollView>
     );
   }
+
+  _renderItemWithParallax = ({item, index}, parallaxProps) => {
+    return (
+      <SliderEntry
+        data={item}
+        even={(index + 1) % 2 === 0}
+        parallax={true}
+        parallaxProps={parallaxProps}
+      />
+    );
+  }
+  // 顶部轮播
+
+  /*顶部滚动视差*/
+
+  /*顶部滚动视差*/
+  getParallaxRenderConfig(params) {
+
+
+    let config = {};
+    // let avatar = typeof (params.avatar) === 'string' ? {uri: params.avatar} : params.avatar;
+    config.renderBackground = () => (
+      <View key="background">
+        <Image
+          // source={{
+          //   uri: params.backgroundImg,
+          //   width: metrics.screenWidth,
+          //   height: PARALLAX_HEADER_HEIGHT
+          // }}
+          source={params.backgroundImg}
+          style={{
+            width:metrics.screenWidth,
+            height: PARALLAX_HEADER_HEIGHT
+          }}
+        />
+        <View style={{
+          position: 'absolute',
+          top: 0,
+          width: metrics.screenWidth,
+          backgroundColor: 'rgba(0,0,0,.3)',
+          height: PARALLAX_HEADER_HEIGHT
+        }}/>
+      </View>
+    );
+    config.renderForeground = () => (
+      <View key="parallax-header" style={styles.parallaxHeader}>
+        <Text style={styles.sectionSpeakerText}>
+          {params.name}
+        </Text>
+        <Text style={styles.sectionTitleText}>
+          {params.description}
+        </Text>
+      </View>
+    );
+    config.renderStickyHeader = () => (
+      <View key="sticky-header" style={styles.stickySection}>
+        <Text style={styles.stickySectionText}>{params.name}</Text>
+      </View>
+    );
+
+    config.renderFixedHeader = () => (
+
+      <View key="fixed-header" style={styles.fixedSection}>
+        <Header
+          headerTx=""
+          // leftIcon="back"
+          // onLeftPress={() => {
+          //   this.props.navigation.goBack(null),[this.props.navigation]
+          // }}
+          rightIcon="bullet"
+          onRightPress={() => {
+
+          }}
+          // style={HEADER}
+          // titleStyle={HEADER_TITLE}
+        />
+      </View>
+    );
+    return config;
+
+  }
+  topParallax(content) {
+    const params = {
+      "name": "React Native Demonstrate",
+      "description": "This is a hot project created by React Native,it's based on the React Native support Android and iOS double platforms.\n\nAuthor: laravelvip.com",
+      "avatar": "",
+      "backgroundImg": require("./images/background_image.jpg"),
+    }
+    const renderConfig = this.getParallaxRenderConfig(params);
+    return (
+      <ParallaxScrollView
+        backgroundColor={palette.portGore}
+        contentBackgroundColor={palette.white}
+        parallaxHeaderHeight={PARALLAX_HEADER_HEIGHT}
+        stickyHeaderHeight={metrics.stickyHeaderHeight}
+        backgroundScrollSpeed={10}
+        {...renderConfig}>
+        <View style={{
+          flex: 1,
+          flexDirection: 'column',
+          justifyContent: 'space-around',
+          alignItems: 'center'
+        }}>
+          {content}
+        </View>
+
+      </ParallaxScrollView>
+    )
+  }
+
 
   _keyExtractor = (item, index) => item.title;
   _renderRecComItem(rowData) {
@@ -199,6 +304,18 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
         subTitle: 'react-native-indicators',
         routeName: 'indicatorScreen',
         icon: require("./images/indicator-card.png")
+      },
+      {
+        title: 'Parallax',
+        subTitle: 'react-native-parallax-scroll-view',
+        routeName: 'parallaxScrollViewScreen',
+        icon: require("./images/parallax-scroll-view.png")
+      },
+      {
+        title: 'Parallax',
+        subTitle: 'react-native-parallax-scroll-view',
+        routeName: 'parallaxScrollViewScreen',
+        icon: require("./images/parallax-scroll-view.png")
       },
     ]
 
@@ -334,38 +451,36 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
 
 
   render() {
-    return (
-      <Screen style={{}} preset="scroll">
+    const content = <View>
+      {/*{this.topCarousel()}*/}
 
-        {this.topCarousel()}
+      {/*github webview entry*/}
+      <TouchableOpacity
+        style={{
+          flex: 1,
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          margin: 15
+        }}
+        onPress={() => {
+          this.props.navigation.navigate('webviewScreen', {url:"https://github.com/zhangs919/ReactNativeDemonstrate", title: 'react native demo github page'})
+        }}
+      >
+        <Text>React Native Demonstrate</Text>
+        <AntDesign name='github' size={20} color={palette.portGore} />
+      </TouchableOpacity>
 
-        {/*github webview entry*/}
-        <TouchableOpacity
-          style={{
-            flex: 1,
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            margin: 15
-          }}
-          onPress={() => {
-            this.props.navigation.navigate('webviewScreen', {url:"https://github.com/zhangs919/ReactNativeDemonstrate", title: 'react native demo github page'})
-          }}
-        >
-          <Text>React Native Demonstrate</Text>
-          <AntDesign name='github' size={20} color={palette.portGore} />
-        </TouchableOpacity>
-
-        {/*精选组件*/}
-        {this.recommendComponents()}
+      {/*精选组件*/}
+      {this.recommendComponents()}
 
 
 
-        {/*<Button title={'轮播组件'} onPress={()=>{*/}
-          {/*this.props.navigation.navigate('carouselScreen')*/}
-        {/*}}/>*/}
-      </Screen>
-    )
+      {/*<Button title={'轮播组件'} onPress={()=>{*/}
+      {/*this.props.navigation.navigate('carouselScreen')*/}
+      {/*}}/>*/}
+    </View>;
+    return this.topParallax(content)
   }
 }
 
@@ -398,5 +513,62 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 3
+  },
+
+  /*滚动视差*/
+  background: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: metrics.screenWidth,
+    height: PARALLAX_HEADER_HEIGHT
+  },
+  stickySection: {
+    height: metrics.stickyHeaderHeight,
+    alignItems: 'center',
+    paddingTop: metrics.top
+  },
+  stickySectionText: {
+    color: 'white',
+    fontSize: 20,
+    margin: 10
+  },
+  fixedSection: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    paddingRight: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingTop: metrics.top
+  },
+  fixedSectionText: {
+    color: '#999',
+    fontSize: 20
+  },
+  parallaxHeader: {
+    alignItems: 'center',
+    flex: 1,
+    flexDirection: 'column',
+    paddingTop: 100
+  },
+  avatar: {
+    marginBottom: 10,
+    borderRadius: AVATAR_SIZE / 2
+  },
+  sectionSpeakerText: {
+    color: 'white',
+    fontSize: 24,
+    paddingVertical: 5,
+    marginBottom: 10
+  },
+  sectionTitleText: {
+    color: 'white',
+    fontSize: 16,
+    marginRight: 10,
+    marginLeft: 10
   },
 })
