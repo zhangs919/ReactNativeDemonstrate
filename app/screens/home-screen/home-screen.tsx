@@ -17,6 +17,9 @@ import Carousel from 'react-native-snap-carousel';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
+import {
+  BarIndicator,
+} from "react-native-indicators"
 
 const PARALLAX_HEADER_HEIGHT = 270;
 const AVATAR_SIZE = 90;
@@ -27,13 +30,16 @@ export interface HomeScreenProps extends NavigationScreenProps<{}> {
 
 interface HomeScreenState {
   slider1ActiveSlide: number,
+  loading: boolean,
+  count: number
 }
 
 export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState> {
 
   state = {
     slider1ActiveSlide: 1,
-
+    loading: true,
+    count: 0
   }
 
   static navigationOptions = {
@@ -46,8 +52,11 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
     },
   }
 
-
-
+  componentDidMount(): void {
+    this.setState({
+      loading: false
+    })
+  }
 
   // 顶部轮播
   topCarousel() {
@@ -146,7 +155,7 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
           // }}
           source={params.backgroundImg}
           style={{
-            width:metrics.screenWidth,
+            width: metrics.screenWidth,
             height: PARALLAX_HEADER_HEIGHT
           }}
         />
@@ -178,24 +187,27 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
     config.renderFixedHeader = () => (
 
       <View key="fixed-header" style={styles.fixedSection}>
-        <Header
-          headerTx=""
-          // leftIcon="back"
-          // onLeftPress={() => {
-          //   this.props.navigation.goBack(null),[this.props.navigation]
-          // }}
-          rightIcon="bullet"
-          onRightPress={() => {
-
+        <TouchableOpacity
+          style={{
+            flex: 1,
+            alignItems: 'flex-end',
+            margin: 15
           }}
-          // style={HEADER}
-          // titleStyle={HEADER_TITLE}
-        />
+          onPress={() => {
+            this.props.navigation.navigate('webviewScreen', {
+              url: "https://github.com/zhangs919/ReactNativeDemonstrate",
+              title: 'react native demo github page'
+            })
+          }}
+        >
+          <AntDesign name='github' size={25} color={palette.white}/>
+        </TouchableOpacity>
       </View>
     );
     return config;
 
   }
+
   topParallax(content) {
     const params = {
       "name": "React Native Demonstrate",
@@ -227,13 +239,14 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
 
 
   _keyExtractor = (item, index) => item.title;
+
   _renderRecComItem(rowData) {
     const item = rowData.item;
     const even = rowData.index % 2;
     const borderRightWidth = even ? 0 : .5;
     const navigation = this.props.navigation;
     const onSelect = goTo => {
-      navigation.navigate(item.routeName,{title: item.title})
+      navigation.navigate(item.routeName, {title: item.title})
     }
     return (
       <TouchableOpacity
@@ -312,9 +325,9 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
         icon: require("./images/parallax-scroll-view.png")
       },
       {
-        title: 'Parallax',
-        subTitle: 'react-native-parallax-scroll-view',
-        routeName: 'parallaxScrollViewScreen',
+        title: 'BeeShell',
+        subTitle: '美团外卖RN组件库',
+        routeName: 'beeshellScreen',
         icon: require("./images/parallax-scroll-view.png")
       },
     ]
@@ -338,7 +351,7 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
               ToastAndroid.show("Show more", ToastAndroid.SHORT);
             }}
           >
-            <MaterialCommunityIcons name='dots-horizontal' size={20} color={palette.black} />
+            <MaterialCommunityIcons name='dots-horizontal' size={20} color={palette.black}/>
           </TouchableOpacity>
         </View>
         <FlatList
@@ -387,7 +400,7 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
               ToastAndroid.show("Show more", ToastAndroid.SHORT);
             }}
           >
-            <MaterialCommunityIcons name='dots-horizontal' size={20} color={palette.black} />
+            <MaterialCommunityIcons name='dots-horizontal' size={20} color={palette.black}/>
           </TouchableOpacity>
         </View>
         <FlatList
@@ -424,7 +437,7 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
               ToastAndroid.show("Show more", ToastAndroid.SHORT);
             }}
           >
-            <MaterialCommunityIcons name='dots-horizontal' size={20} color={palette.black} />
+            <MaterialCommunityIcons name='dots-horizontal' size={20} color={palette.black}/>
           </TouchableOpacity>
         </View>
         <FlatList
@@ -449,31 +462,42 @@ export class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState
   }
 
 
-
   render() {
-    const content = <View>
+    const {loading} = this.state;
+    const indicator = <BarIndicator sizs={12} color={palette.martinique} style={{
+      flex: 1,
+      justifyContent: 'center',
+      width: metrics.screenWidth,
+      height: metrics.screenHeight - 64 - 40 - 25,
+      alignItems: 'center',
+    }}/>
+
+    const content = loading ? indicator : <View>
+
       {/*{this.topCarousel()}*/}
 
       {/*github webview entry*/}
-      <TouchableOpacity
-        style={{
-          flex: 1,
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          margin: 15
-        }}
-        onPress={() => {
-          this.props.navigation.navigate('webviewScreen', {url:"https://github.com/zhangs919/ReactNativeDemonstrate", title: 'react native demo github page'})
-        }}
-      >
-        <Text>React Native Demonstrate</Text>
-        <AntDesign name='github' size={20} color={palette.portGore} />
-      </TouchableOpacity>
+      {/*<TouchableOpacity*/}
+      {/*style={{*/}
+      {/*flex: 1,*/}
+      {/*flexDirection: 'row',*/}
+      {/*justifyContent: 'space-between',*/}
+      {/*alignItems: 'center',*/}
+      {/*margin: 15*/}
+      {/*}}*/}
+      {/*onPress={() => {*/}
+      {/*this.props.navigation.navigate('webviewScreen', {*/}
+      {/*url: "https://github.com/zhangs919/ReactNativeDemonstrate",*/}
+      {/*title: 'react native demo github page'*/}
+      {/*})*/}
+      {/*}}*/}
+      {/*>*/}
+      {/*<Text>React Native Demonstrate</Text>*/}
+      {/*<AntDesign name='github' size={20} color={palette.portGore}/>*/}
+      {/*</TouchableOpacity>*/}
 
       {/*精选组件*/}
       {this.recommendComponents()}
-
 
 
       {/*<Button title={'轮播组件'} onPress={()=>{*/}
@@ -571,4 +595,6 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginLeft: 10
   },
+  /*滚动视差*/
+
 })

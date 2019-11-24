@@ -11,3 +11,8 @@
 ## echarts-for-react[echart 图表]
 
 ## react-native-parallax-scroll-view[滚动视差效果]
+
+## react-native-magic-move
+## react-native-magic-moving
+
+## beeshell[美团基础组件库]

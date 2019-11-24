@@ -4,7 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import {Screen, SliderEntry} from "../../components"
 // import { useStores } from "../models/root-store"
-import {palette} from "../../theme"
+import {metrics, palette} from "../../theme"
 import { NavigationScreenProps } from "react-navigation"
 import Carousel, {Pagination}  from 'react-native-snap-carousel';
 
@@ -12,22 +12,41 @@ import { sliderWidth, itemWidth } from './styles/SliderEntry.style';
 // import styles, { colors } from './styles/index.style';
 import { ENTRIES1, ENTRIES2 } from './static/entries';
 import { scrollInterpolators, animatedStyles } from './utils/animations';
+import {
+  BarIndicator,
+} from "react-native-indicators"
 
 const IS_ANDROID = Platform.OS === 'android';
 const SLIDER_1_FIRST_ITEM = 1;
 
 export interface CarouselScreenProps extends NavigationScreenProps<{}> {
+
 }
 
 interface CarouselScreenState {
-  slider1ActiveSlide:number
+  slider1ActiveSlide:number,
+  loading: boolean
 }
 
 export class CarouselScreen extends React.Component<CarouselScreenProps, CarouselScreenState> {
 
+
+
   state = {
-    slider1ActiveSlide: 1
+    slider1ActiveSlide: 1,
+    loading: true
   }
+
+  componentDidMount() {
+    console.log('componentDidMount')
+    this.setState({
+      loading: false,
+    })
+  }
+
+
+
+
 
   static navigationOptions = ({navigation}) => {
     const titleMargin = Platform.OS === "ios" ? -50 : 0
@@ -200,6 +219,14 @@ export class CarouselScreen extends React.Component<CarouselScreenProps, Carouse
   }
 
   render () {
+    const {loading} = this.state;
+    const indicator = <BarIndicator sizs={12} color={palette.martinique} style={{
+      flex: 1,
+      justifyContent: 'center',
+      width: metrics.screenWidth,
+      height: metrics.screenHeight - 64 - 40 - 25,
+      alignItems: 'center',}} />
+
     const example1 = this.mainExample(1, 'Default layout | Loop | Autoplay | Parallax | Scale | Opacity | Pagination with tappable dots');
     const example2 = this.momentumExample(2, 'Momentum | Left-aligned | Active animation');
     const example3 = this.layoutExample(3, '"Stack of cards" layout | Loop', 'stack');
@@ -209,9 +236,11 @@ export class CarouselScreen extends React.Component<CarouselScreenProps, Carouse
     const example7 = this.customExample(7, 'Custom animation 3', 3, this._renderDarkItem);
     const example8 = this.customExample(8, 'Custom animation 4', 4, this._renderLightItem);
 
+
+
     return (
       <Screen style={{}} preset="scroll">
-        <View style={styles.container}>
+        {loading ? indicator : <View style={styles.container}>
           { this.gradient }
           <ScrollView
             style={styles.scrollview}
@@ -227,7 +256,7 @@ export class CarouselScreen extends React.Component<CarouselScreenProps, Carouse
             { example7 }
             { example8 }
           </ScrollView>
-        </View>
+        </View>}
       </Screen>
     );
   }
